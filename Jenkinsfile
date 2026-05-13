@@ -3,15 +3,20 @@ pipeline {
 
     stages {
 
-        stage('hello') {
+        stage('Build') {
             steps {
-                echo "demo pull SCM"
+                echo "Build application ...."
             }
         }
 
-        stage('Build') {
+        stage('Testing') {
             steps {
-                echo "Building application..."
+                echo "Testing application..."
+            }
+        }
+        stage('deploy') {
+            steps {
+                echo "deploy application..."
             }
         }
 
